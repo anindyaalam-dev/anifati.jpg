@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Gift Reveal</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Background Styling */
+        body {
+            background: url('pg1.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 82%, 18% 100%, 0% 38%);
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-200px) scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-400px) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* Main Content Styling */
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gift-box {
+            background-color: #8A2BE2;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #FFE4E1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click to Open Your Gifts 💜</h1>
+        <div class="gift-grid">
+            <a href="gift1_gerbera.html" class="gift-box">🎁 Gift 1</a>
+            <a href="gift2_purple_box.html" class="gift-box">🎁 Gift 2</a>
+            <a href="gift3_hello_kitty.html" class="gift-box">🎁 Gift 3</a>
+            <a href="gift4_lego_flowers.html" class="gift-box">🎁 Gift 4</a>
+            <a href="gift5_ferrero_rocher.html" class="gift-box">🎁 Gift 5</a>
+            <a href="gift6_purple_orchid.html" class="gift-box">🎁 Gift 6</a>
+        </div>
+        <footer>Made with all my love for you ❤️</footer>
+    </div>
+
+    <div style="position: absolute; bottom: 20px; width: 100%; text-align: center;">
+        <a href="letter_page.html">
+            <button style="padding: 10px 20px; font-size: 1.2rem; background-color: #FF69B4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Click to read!
+            </button>
+        </a>
+    </div>
+
+    <script>
+        function openGift(giftNumber) {
+            alert(`Opening Gift ${giftNumber}...`); // Placeholder for navigation logic
+        }
+    </script>
+</body>
+</html>
