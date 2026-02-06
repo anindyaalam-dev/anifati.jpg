@@ -166,22 +166,7 @@
         });
 
         // Celebration on "Yes" button click
-        yesBtn.addEventListener('click', () => {
-            celebration.style.display = 'flex';
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = `${Math.random() * window.innerWidth}px`;
-                confetti.style.top = `${Math.random() * window.innerHeight}px`;
-                confetti.style.backgroundColor = Math.random() > 0.5 ? '#FF69B4' : '#9370DB';
-                document.body.appendChild(confetti);
-            }
-        });
-
-        // Remove confetti after animation
-        setInterval(() => {
-            document.querySelectorAll('.confetti').forEach(confetti => confetti.remove());
-        }, 3000);
+        // Removed the celebration message and confetti logic as per the request.
     </script>
 </body>
 </html>
